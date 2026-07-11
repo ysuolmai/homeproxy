@@ -338,25 +338,9 @@ msgstr "证书路径"
 msgid "Check"
 msgstr "检查"
 
-#: htdocs/luci-static/resources/view/homeproxy/status.js:105
-msgid "Check update"
-msgstr "检查更新"
-
 #: htdocs/luci-static/resources/view/homeproxy/client.js:241
 msgid "China DNS server"
 msgstr "国内 DNS 服务器"
-
-#: htdocs/luci-static/resources/view/homeproxy/status.js:244
-msgid "China IPv4 list version"
-msgstr "国内 IPv4 库版本"
-
-#: htdocs/luci-static/resources/view/homeproxy/status.js:248
-msgid "China IPv6 list version"
-msgstr "国内 IPv6 库版本"
-
-#: htdocs/luci-static/resources/view/homeproxy/status.js:252
-msgid "China list version"
-msgstr "国内域名列表版本"
 
 #: htdocs/luci-static/resources/view/homeproxy/node.js:1783
 msgid "Choose which method node latency tests use."
@@ -803,10 +787,6 @@ msgstr "启用 TCP Brutal 拥塞控制算法。"
 msgid "Enable UDP fragmentation."
 msgstr "启用 UDP 分片。"
 
-#: htdocs/luci-static/resources/view/homeproxy/client.js:351
-msgid "Enable endpoint-independent NAT"
-msgstr "启用端点独立 NAT"
-
 #: htdocs/luci-static/resources/view/homeproxy/node.js:1410
 #: htdocs/luci-static/resources/view/homeproxy/server.js:507
 msgid "Enable padding"
@@ -939,10 +919,6 @@ msgstr "分片回退延迟"
 #: htdocs/luci-static/resources/view/homeproxy/node.js:1272
 msgid "GET"
 msgstr "GET"
-
-#: htdocs/luci-static/resources/view/homeproxy/status.js:256
-msgid "GFW list version"
-msgstr "GFW 域名列表版本"
 
 #: htdocs/luci-static/resources/view/homeproxy/client.js:275
 msgid "GFWList"
@@ -1810,12 +1786,6 @@ msgstr "路径"
 msgid "Peer pubkic key"
 msgstr "对端公钥"
 
-#: htdocs/luci-static/resources/view/homeproxy/client.js:352
-msgid ""
-"Performance may degrade slightly, so it is not recommended to enable on when "
-"it is not needed."
-msgstr "性能可能会略有下降，建议仅在需要时开启。"
-
 #: htdocs/luci-static/resources/view/homeproxy/node.js:1366
 msgid "Persistent keepalive interval"
 msgstr "持久 keepalive 间隔"
@@ -1958,10 +1928,6 @@ msgstr "仅允许列表内"
 #: htdocs/luci-static/resources/view/homeproxy/client.js:307
 msgid "Proxy mode"
 msgstr "代理模式"
-
-#: htdocs/luci-static/resources/view/homeproxy/node.js:927
-msgid "Proxy protocol"
-msgstr "代理协议"
 
 #: htdocs/luci-static/resources/view/homeproxy/client.js:644
 #: htdocs/luci-static/resources/view/homeproxy/client.js:976
@@ -3048,10 +3014,6 @@ msgstr "WireGuard 预共享密钥。"
 msgid "WireGuard requires base64-encoded private keys."
 msgstr "WireGuard 要求 base64 编码的私钥。"
 
-#: htdocs/luci-static/resources/view/homeproxy/node.js:928
-msgid "Write proxy protocol in the connection header."
-msgstr "在连接头中写入代理协议。"
-
 #: htdocs/luci-static/resources/view/homeproxy/node.js:1319
 #: htdocs/luci-static/resources/view/homeproxy/node.js:1832
 msgid "Xudp (Xray-core)"
@@ -3222,6 +3184,38 @@ msgstr "有效端口值"
 #: htdocs/luci-static/resources/homeproxy.js:328
 msgid "valid uuid"
 msgstr "有效 uuid"
+
+#: htdocs/luci-static/resources/view/homeproxy/status.js:66
+msgid "China IPv4 list"
+msgstr "国内 IPv4 列表"
+
+#: htdocs/luci-static/resources/view/homeproxy/status.js:71
+msgid "China IPv6 list"
+msgstr "国内 IPv6 列表"
+
+#: htdocs/luci-static/resources/view/homeproxy/status.js:76
+msgid "China domain list"
+msgstr "国内域名列表"
+
+#: htdocs/luci-static/resources/view/homeproxy/status.js:81
+msgid "GFW domain list"
+msgstr "GFW 域名列表"
+
+#: htdocs/luci-static/resources/view/homeproxy/status.js:105
+msgid "Name"
+msgstr "名称"
+
+#: htdocs/luci-static/resources/view/homeproxy/status.js:107
+msgid "Source"
+msgstr "来源"
+
+#: htdocs/luci-static/resources/view/homeproxy/status.js:162
+msgid "Update all"
+msgstr "全部更新"
+
+#: htdocs/luci-static/resources/view/homeproxy/status.js:106
+msgid "Version"
+msgstr "版本"
 
 #~ msgid "Real Proxy"
 #~ msgstr "Real Proxy"

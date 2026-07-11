@@ -327,24 +327,8 @@ msgstr ""
 msgid "Check"
 msgstr ""
 
-#: htdocs/luci-static/resources/view/homeproxy/status.js:105
-msgid "Check update"
-msgstr ""
-
 #: htdocs/luci-static/resources/view/homeproxy/client.js:241
 msgid "China DNS server"
-msgstr ""
-
-#: htdocs/luci-static/resources/view/homeproxy/status.js:244
-msgid "China IPv4 list version"
-msgstr ""
-
-#: htdocs/luci-static/resources/view/homeproxy/status.js:248
-msgid "China IPv6 list version"
-msgstr ""
-
-#: htdocs/luci-static/resources/view/homeproxy/status.js:252
-msgid "China list version"
 msgstr ""
 
 #: htdocs/luci-static/resources/view/homeproxy/node.js:1783
@@ -780,10 +764,6 @@ msgstr ""
 msgid "Enable UDP fragmentation."
 msgstr ""
 
-#: htdocs/luci-static/resources/view/homeproxy/client.js:351
-msgid "Enable endpoint-independent NAT"
-msgstr ""
-
 #: htdocs/luci-static/resources/view/homeproxy/node.js:1410
 #: htdocs/luci-static/resources/view/homeproxy/server.js:507
 msgid "Enable padding"
@@ -915,10 +895,6 @@ msgstr ""
 
 #: htdocs/luci-static/resources/view/homeproxy/node.js:1272
 msgid "GET"
-msgstr ""
-
-#: htdocs/luci-static/resources/view/homeproxy/status.js:256
-msgid "GFW list version"
 msgstr ""
 
 #: htdocs/luci-static/resources/view/homeproxy/client.js:275
@@ -1779,12 +1755,6 @@ msgstr ""
 msgid "Peer pubkic key"
 msgstr ""
 
-#: htdocs/luci-static/resources/view/homeproxy/client.js:352
-msgid ""
-"Performance may degrade slightly, so it is not recommended to enable on when "
-"it is not needed."
-msgstr ""
-
 #: htdocs/luci-static/resources/view/homeproxy/node.js:1366
 msgid "Persistent keepalive interval"
 msgstr ""
@@ -1926,10 +1896,6 @@ msgstr ""
 
 #: htdocs/luci-static/resources/view/homeproxy/client.js:307
 msgid "Proxy mode"
-msgstr ""
-
-#: htdocs/luci-static/resources/view/homeproxy/node.js:927
-msgid "Proxy protocol"
 msgstr ""
 
 #: htdocs/luci-static/resources/view/homeproxy/client.js:644
@@ -2979,10 +2945,6 @@ msgstr ""
 msgid "WireGuard requires base64-encoded private keys."
 msgstr ""
 
-#: htdocs/luci-static/resources/view/homeproxy/node.js:928
-msgid "Write proxy protocol in the connection header."
-msgstr ""
-
 #: htdocs/luci-static/resources/view/homeproxy/node.js:1319
 #: htdocs/luci-static/resources/view/homeproxy/node.js:1832
 msgid "Xudp (Xray-core)"
@@ -3151,4 +3113,36 @@ msgstr ""
 
 #: htdocs/luci-static/resources/homeproxy.js:328
 msgid "valid uuid"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/homeproxy/status.js:66
+msgid "China IPv4 list"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/homeproxy/status.js:71
+msgid "China IPv6 list"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/homeproxy/status.js:76
+msgid "China domain list"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/homeproxy/status.js:81
+msgid "GFW domain list"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/homeproxy/status.js:105
+msgid "Name"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/homeproxy/status.js:107
+msgid "Source"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/homeproxy/status.js:162
+msgid "Update all"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/homeproxy/status.js:106
+msgid "Version"
 msgstr ""
