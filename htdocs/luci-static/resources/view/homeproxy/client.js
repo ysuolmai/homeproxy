@@ -86,6 +86,18 @@ function renderStatus(isRunning, version, currentNode) {
 	return renderHTML;
 }
 
+const urltestURLs = [
+	[ 'http://connect.rom.miui.com/generate_204', 'MIUI' ],
+	[ 'http://connectivitycheck.platform.hicloud.com/generate_204', 'HiCloud' ],
+	[ 'https://cp.cloudflare.com/generate_204', 'Cloudflare' ],
+	[ 'https://www.gstatic.com/generate_204', 'Google' ]
+];
+
+function addURLTestChoices(option) {
+	for (let choice of urltestURLs)
+		option.value(choice[0], choice[1]);
+}
+
 let stubValidator = {
 	factory: validation,
 	apply(type, value, args) {
@@ -177,6 +189,26 @@ return view.extend({
 		o.depends('main_node', 'urltest');
 		o.rmempty = false;
 
+		o = s.taboption('routing', form.Value, 'main_urltest_url', _('Test URL'),
+			_('The URL to test.'));
+		addURLTestChoices(o);
+		o.placeholder = 'https://www.gstatic.com/generate_204';
+		o.validate = function(section_id, value) {
+			if (section_id && value) {
+				try {
+					let url = new URL(value);
+					if (!url.hostname)
+						return _('Expecting: %s').format(_('valid URL'));
+				}
+				catch(e) {
+					return _('Expecting: %s').format(_('valid URL'));
+				}
+			}
+
+			return true;
+		}
+		o.depends('main_node', 'urltest');
+
 		o = s.taboption('routing', form.Value, 'main_urltest_interval', _('Test interval'),
 			_('The test interval in seconds.'));
 		o.datatype = 'uinteger';
@@ -205,6 +237,26 @@ return view.extend({
 			o.value(i, proxy_nodes[i]);
 		o.depends('main_udp_node', 'urltest');
 		o.rmempty = false;
+
+		o = s.taboption('routing', form.Value, 'main_udp_urltest_url', _('Test URL'),
+			_('The URL to test.'));
+		addURLTestChoices(o);
+		o.placeholder = 'https://www.gstatic.com/generate_204';
+		o.validate = function(section_id, value) {
+			if (section_id && value) {
+				try {
+					let url = new URL(value);
+					if (!url.hostname)
+						return _('Expecting: %s').format(_('valid URL'));
+				}
+				catch(e) {
+					return _('Expecting: %s').format(_('valid URL'));
+				}
+			}
+
+			return true;
+		}
+		o.depends('main_udp_node', 'urltest');
 
 		o = s.taboption('routing', form.Value, 'main_udp_urltest_interval', _('Test interval'),
 			_('The test interval in seconds.'));
@@ -537,6 +589,7 @@ return view.extend({
 
 		so = ss.option(form.Value, 'urltest_url', _('Test URL'),
 			_('The URL to test.'));
+		addURLTestChoices(so);
 		so.placeholder = 'https://www.gstatic.com/generate_204';
 		so.validate = function(section_id, value) {
 			if (section_id && value) {
