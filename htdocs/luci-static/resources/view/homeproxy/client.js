@@ -173,13 +173,26 @@ return view.extend({
 
 		s.tab('routing', _('Routing Settings'));
 
+		o = s.taboption('routing', form.ListValue, 'routing_mode', _('Routing mode'));
+		o.value('gfwlist', _('GFWList'));
+		o.value('bypass_mainland_china', _('Bypass mainland China'));
+		o.value('proxy_mainland_china', _('Only proxy mainland China'));
+		o.value('custom', _('Custom routing'));
+		o.value('global', _('Global'));
+		o.default = 'bypass_mainland_china';
+		o.rmempty = false;
+		o.onchange = function(ev, section_id, value) {
+			if (section_id && value === 'custom')
+				this.map.save(null, true);
+		}
+
 		o = s.taboption('routing', form.ListValue, 'main_node', _('Main node'));
 		o.value('nil', _('Disable'));
 		o.value('urltest', _('URLTest'));
 		for (let i in proxy_nodes)
 			o.value(i, proxy_nodes[i]);
 		o.default = 'nil';
-		o.depends({'routing_mode': 'custom', '!reverse': true});
+		o.depends('routing_mode', /^((?!custom).)+$/);
 		o.rmempty = false;
 
 		o = s.taboption('routing', hp.CBIStaticList, 'main_urltest_nodes', _('URLTest nodes'),
@@ -281,7 +294,7 @@ return view.extend({
 		o.value('https://dns.opendns.com/dns-query', _('Cisco Public DNS (DoH)'));
 		o.default = 'https://dns.quad9.net/dns-query';
 		o.rmempty = false;
-		o.depends({'routing_mode': 'custom', '!reverse': true});
+		o.depends('routing_mode', /^((?!custom).)+$/);
 		o.validate = function(section_id, value) {
 			if (section_id && !['wan'].includes(value)) {
 				if (!value)
@@ -338,19 +351,6 @@ return view.extend({
 			}
 
 			return true;
-		}
-
-		o = s.taboption('routing', form.ListValue, 'routing_mode', _('Routing mode'));
-		o.value('gfwlist', _('GFWList'));
-		o.value('bypass_mainland_china', _('Bypass mainland China'));
-		o.value('proxy_mainland_china', _('Only proxy mainland China'));
-		o.value('custom', _('Custom routing'));
-		o.value('global', _('Global'));
-		o.default = 'bypass_mainland_china';
-		o.rmempty = false;
-		o.onchange = function(ev, section_id, value) {
-			if (section_id && value === 'custom')
-				this.map.save(null, true);
 		}
 
 		o = s.taboption('routing', form.Value, 'routing_port', _('Routing ports'),
